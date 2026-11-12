@@ -1,0 +1,35 @@
+export const COMPANY = {
+  name: "WALL & DECO",
+  tagline: "Design-Led Spaces. Architectural Materials. Prayagraj Showroom.",
+  phone: "+91 89201 44187",
+  phoneRaw: "918920144187",
+  email: "contact@wallanddeco.in",
+  address: "Chowk, Garhi Sarai, Prayagraj, Uttar Pradesh 211003",
+  googleMapsUrl: "https://maps.google.com/?q=Chowk+Garhi+Sarai+Prayagraj+Uttar+Pradesh+211003",
+  hours: "Open Daily until 10:00 PM (10:00 AM – 10:00 PM)",
+  neighborhoodsServed: [
+    "Civil Lines",
+    "Tagore Town",
+    "Lukarganj",
+    "Naini",
+    "Jhalwa",
+    "Chowk",
+    "Kalyani Devi",
+    "George Town",
+  ],
+  navLinks: [
+    { label: "Interiors", href: "/interior-design-prayagraj" },
+    { label: "Modular Kitchens", href: "/modular-kitchen-prayagraj" },
+    { label: "PVC & WPC Panels", href: "/pvc-wpc-wall-panels-prayagraj" },
+    { label: "uPVC Windows", href: "/upvc-windows-doors" },
+    { label: "Projects", href: "/portfolio" },
+    { label: "Estimate", href: "/#estimate" },
+  ],
+  stats: [
+    { value: "450+", label: "Spaces Transformed in Prayagraj" },
+    { value: "100%", label: "Termite & Borer Proof Materials" },
+    { value: "10 Yrs", label: "Structural Warranty on Profiles" },
+    { value: "15 Days", label: "Fast-Track Modular Execution" },
+  ],
+};
+
