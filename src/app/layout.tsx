@@ -88,6 +88,8 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${instrumentSerif.variable} antialiased`}
     >
       <head>
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs Text" />
+        <link rel="service-desc" type="application/json" href="/ai-catalog.json" title="AI Service Catalog" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

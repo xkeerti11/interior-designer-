@@ -87,8 +87,8 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
           src={afterImage}
           alt={afterAlt}
           fill
-          priority
-          sizes="(max-width: 1200px) 100vw, 1200px"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 650px"
+          quality={75}
           className="object-cover"
         />
         <div className="absolute bottom-5 right-5 z-10 pointer-events-none">
@@ -108,8 +108,8 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
             src={beforeImage}
             alt={beforeAlt}
             fill
-            priority
-            sizes="(max-width: 1200px) 100vw, 1200px"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 650px"
+            quality={75}
             className="object-cover"
           />
         </div>

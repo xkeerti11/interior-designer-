@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import {
   ArrowRight,
   ShieldCheck,
@@ -17,11 +18,20 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { HeadingFormula } from "@/components/ui/HeadingFormula";
 import { Badge } from "@/components/ui/Badge";
-import { BeforeAfterSlider } from "@/components/home/BeforeAfterSlider";
-import { QuickEstimator } from "@/components/home/QuickEstimator";
 import { COMPANY } from "@/data/company";
 import { PROJECTS } from "@/data/projects";
 import { formatWhatsAppUrl } from "@/lib/utils";
+
+// Dynamically import below-the-fold interactive components to slash main thread blocking time (TBT)
+const BeforeAfterSlider = dynamic(
+  () => import("@/components/home/BeforeAfterSlider").then((mod) => mod.BeforeAfterSlider),
+  { ssr: true }
+);
+
+const QuickEstimator = dynamic(
+  () => import("@/components/home/QuickEstimator").then((mod) => mod.QuickEstimator),
+  { ssr: true }
+);
 
 export default function HomePage() {
   return (
@@ -93,7 +103,8 @@ export default function HomePage() {
                   alt="Minimalist luxury living space with fluted wall panels and warm ambient cove lighting"
                   fill
                   priority
-                  sizes="(max-width: 1024px) 100vw, 500px"
+                  fetchPriority="high"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 500px"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://agenticresourcediscovery.org/schemas/v1/ai-catalog.json",
+  "name": "WALL & DECO Prayagraj",
+  "description": "Turnkey interior execution, modular kitchens, wall panels, and acoustic uPVC windows in Prayagraj, India.",
+  "url": "https://interior-designer-iota-three.vercel.app",
+  "contact": {
+    "name": "WALL & DECO Studio",
+    "telephone": "+91 89201 44187",
+    "address": "Chowk, Garhi Sarai, Prayagraj, Uttar Pradesh 211003, India"
+  },
+  "services": [
+    {
+      "id": "turnkey-interiors",
+      "name": "Turnkey Interior Design",
+      "url": "https://interior-designer-iota-three.vercel.app/interior-design-prayagraj"
+    },
+    {
+      "id": "wall-panels",
+      "name": "PVC & WPC Wall Panels",
+      "url": "https://interior-designer-iota-three.vercel.app/pvc-wpc-wall-panels-prayagraj"
+    },
+    {
+      "id": "modular-kitchens",
+      "name": "Modular Kitchens",
+      "url": "https://interior-designer-iota-three.vercel.app/modular-kitchen-prayagraj"
+    },
+    {
+      "id": "upvc-windows",
+      "name": "uPVC Windows & Doors",
+      "url": "https://interior-designer-iota-three.vercel.app/upvc-windows-doors"
+    },
+    {
+      "id": "portfolio",
+      "name": "Project Gallery",
+      "url": "https://interior-designer-iota-three.vercel.app/portfolio"
+    },
+    {
+      "id": "contact-showroom",
+      "name": "Showroom Booking & Contact",
+      "url": "https://interior-designer-iota-three.vercel.app/contact-showroom"
+    }
+  ]
+}

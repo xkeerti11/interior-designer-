@@ -154,10 +154,11 @@ ${selectedFile ? `- Note: I have a floor plan file (${selectedFile.name}) ready 
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="text-xs font-semibold text-ink block mb-1.5">
+              <label htmlFor="contact-name" className="text-xs font-semibold text-ink block mb-1.5 cursor-pointer">
                 Your Full Name *
               </label>
               <input
+                id="contact-name"
                 type="text"
                 required
                 placeholder="e.g. Rajesh Kumar"
@@ -168,10 +169,11 @@ ${selectedFile ? `- Note: I have a floor plan file (${selectedFile.name}) ready 
             </div>
 
             <div>
-              <label className="text-xs font-semibold text-ink block mb-1.5">
+              <label htmlFor="contact-phone" className="text-xs font-semibold text-ink block mb-1.5 cursor-pointer">
                 Phone Number (10 Digits) *
               </label>
               <input
+                id="contact-phone"
                 type="tel"
                 required
                 placeholder="e.g. 98765 43210"
@@ -184,10 +186,11 @@ ${selectedFile ? `- Note: I have a floor plan file (${selectedFile.name}) ready 
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="text-xs font-semibold text-ink block mb-1.5">
+              <label htmlFor="contact-email" className="text-xs font-semibold text-ink block mb-1.5 cursor-pointer">
                 Email Address (Optional)
               </label>
               <input
+                id="contact-email"
                 type="email"
                 placeholder="name@example.com"
                 value={email}
@@ -197,10 +200,11 @@ ${selectedFile ? `- Note: I have a floor plan file (${selectedFile.name}) ready 
             </div>
 
             <div>
-              <label className="text-xs font-semibold text-ink block mb-1.5">
+              <label htmlFor="contact-project-type" className="text-xs font-semibold text-ink block mb-1.5 cursor-pointer">
                 Project Type
               </label>
               <select
+                id="contact-project-type"
                 value={projectType}
                 onChange={(e) => setProjectType(e.target.value)}
                 className="w-full px-4 py-3 sm:py-2.5 rounded-xl bg-canvas border border-border-subtle text-base sm:text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/40 cursor-pointer"
@@ -216,10 +220,11 @@ ${selectedFile ? `- Note: I have a floor plan file (${selectedFile.name}) ready 
           </div>
 
           <div>
-            <label className="text-xs font-semibold text-ink block mb-1.5">
+            <label htmlFor="contact-locality" className="text-xs font-semibold text-ink block mb-1.5 cursor-pointer">
               Locality in Prayagraj
             </label>
             <select
+              id="contact-locality"
               value={neighborhood}
               onChange={(e) => setNeighborhood(e.target.value)}
               className="w-full px-4 py-3 sm:py-2.5 rounded-xl bg-canvas border border-border-subtle text-base sm:text-sm text-ink focus:outline-none focus:ring-2 focus:ring-accent/40 cursor-pointer"
@@ -234,10 +239,11 @@ ${selectedFile ? `- Note: I have a floor plan file (${selectedFile.name}) ready 
           </div>
 
           <div>
-            <label className="text-xs font-semibold text-ink block mb-1.5">
+            <label htmlFor="contact-message" className="text-xs font-semibold text-ink block mb-1.5 cursor-pointer">
               Tell Us About Your Space (Dimensions, Requirements, Timeline)
             </label>
             <textarea
+              id="contact-message"
               rows={3}
               placeholder="e.g. 3BHK flat in Civil Lines, looking for fluted TV paneling and parallel kitchen by next month..."
               value={message}
@@ -248,9 +254,9 @@ ${selectedFile ? `- Note: I have a floor plan file (${selectedFile.name}) ready 
 
           {/* Local Floor Plan Preview (PRD Mandate: Local preview only) */}
           <div className="space-y-2">
-            <label className="text-xs font-semibold text-ink block">
+            <span className="text-xs font-semibold text-ink block">
               Attach Room Photo or Floor Plan (Local In-Browser Preview)
-            </label>
+            </span>
             <div className="border-2 border-dashed border-border-subtle rounded-2xl p-5 text-center bg-canvas/60 hover:bg-canvas transition-colors">
               {selectedFile ? (
                 <div className="flex items-center justify-between gap-4 p-2 bg-surface rounded-xl border border-border-subtle">
@@ -285,7 +291,7 @@ ${selectedFile ? `- Note: I have a floor plan file (${selectedFile.name}) ready 
                   </button>
                 </div>
               ) : (
-                <label className="cursor-pointer block space-y-1.5">
+                <label htmlFor="contact-file-upload" className="cursor-pointer block space-y-1.5">
                   <Upload className="w-6 h-6 text-muted mx-auto" />
                   <span className="text-xs font-semibold text-accent block">
                     Upload Floor Plan or Room Image
@@ -294,8 +300,10 @@ ${selectedFile ? `- Note: I have a floor plan file (${selectedFile.name}) ready 
                     PNG, JPG or PDF up to 10MB (Rendered locally in your browser)
                   </span>
                   <input
+                    id="contact-file-upload"
                     type="file"
                     accept="image/*,.pdf"
+                    aria-label="Upload Floor Plan or Room Image"
                     onChange={handleFileChange}
                     className="hidden"
                   />

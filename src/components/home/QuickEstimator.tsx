@@ -48,7 +48,7 @@ export const QuickEstimator: React.FC = () => {
           <span>Interactive Planning Tool</span>
         </span>
         <HeadingFormula
-          as="h3"
+          as="h2"
           regularText="Estimate Your Space in"
           italicText="Seconds"
           className="text-2xl sm:text-3xl mt-2 font-bold"
@@ -94,30 +94,38 @@ export const QuickEstimator: React.FC = () => {
           <div className="lg:col-span-7 space-y-6">
             <div>
               <div className="flex justify-between text-sm font-medium mb-2">
-                <span>Wall Width: <strong className="text-ink">{wallWidth} Feet</strong></span>
+                <label htmlFor="wall-width-slider" className="cursor-pointer">
+                  Wall Width: <strong className="text-ink">{wallWidth} Feet</strong>
+                </label>
                 <span className="text-xs text-muted">(Horizontal Run)</span>
               </div>
               <input
+                id="wall-width-slider"
                 type="range"
                 min="4"
                 max="30"
                 value={wallWidth}
                 onChange={(e) => setWallWidth(Number(e.target.value))}
+                aria-label="Wall Width in feet"
                 className="w-full accent-accent h-2 bg-canvas rounded-lg cursor-pointer"
               />
             </div>
 
             <div>
               <div className="flex justify-between text-sm font-medium mb-2">
-                <span>Ceiling Height: <strong className="text-ink">{wallHeight} Feet</strong></span>
+                <label htmlFor="wall-height-slider" className="cursor-pointer">
+                  Ceiling Height: <strong className="text-ink">{wallHeight} Feet</strong>
+                </label>
                 <span className="text-xs text-muted">(Vertical Height)</span>
               </div>
               <input
+                id="wall-height-slider"
                 type="range"
                 min="7"
                 max="14"
                 value={wallHeight}
                 onChange={(e) => setWallHeight(Number(e.target.value))}
+                aria-label="Ceiling Height in feet"
                 className="w-full accent-accent h-2 bg-canvas rounded-lg cursor-pointer"
               />
             </div>
@@ -151,9 +159,9 @@ export const QuickEstimator: React.FC = () => {
 
           {/* Results Summary Card */}
           <div className="lg:col-span-5 bg-canvas p-6 rounded-2xl border border-border-subtle space-y-4">
-            <h4 className="text-xs uppercase tracking-wider text-muted font-bold">
+            <h3 className="text-xs uppercase tracking-wider text-muted font-bold">
               Estimated Requirements
-            </h4>
+            </h3>
             <div className="space-y-3">
               <div className="flex justify-between items-baseline border-b border-border-subtle pb-2">
                 <span className="text-sm text-muted">Surface Area</span>
@@ -216,14 +224,18 @@ export const QuickEstimator: React.FC = () => {
 
             <div>
               <div className="flex justify-between text-sm font-medium mb-2">
-                <span>Primary Wall Counter: <strong className="text-ink">{runA} Feet</strong></span>
+                <label htmlFor="kitchen-run-a" className="cursor-pointer">
+                  Primary Wall Counter: <strong className="text-ink">{runA} Feet</strong>
+                </label>
               </div>
               <input
+                id="kitchen-run-a"
                 type="range"
                 min="6"
                 max="22"
                 value={runA}
                 onChange={(e) => setRunA(Number(e.target.value))}
+                aria-label="Primary Wall Counter in feet"
                 className="w-full accent-accent h-2 bg-canvas rounded-lg cursor-pointer"
               />
             </div>
@@ -231,14 +243,18 @@ export const QuickEstimator: React.FC = () => {
             {kitchenLayout !== "straight" && (
               <div>
                 <div className="flex justify-between text-sm font-medium mb-2">
-                  <span>Secondary Wall Counter: <strong className="text-ink">{runB} Feet</strong></span>
+                  <label htmlFor="kitchen-run-b" className="cursor-pointer">
+                    Secondary Wall Counter: <strong className="text-ink">{runB} Feet</strong>
+                  </label>
                 </div>
                 <input
+                  id="kitchen-run-b"
                   type="range"
                   min="4"
                   max="18"
                   value={runB}
                   onChange={(e) => setRunB(Number(e.target.value))}
+                  aria-label="Secondary Wall Counter in feet"
                   className="w-full accent-accent h-2 bg-canvas rounded-lg cursor-pointer"
                 />
               </div>
@@ -247,9 +263,9 @@ export const QuickEstimator: React.FC = () => {
 
           {/* Results Summary Card */}
           <div className="lg:col-span-5 bg-canvas p-6 rounded-2xl border border-border-subtle space-y-4">
-            <h4 className="text-xs uppercase tracking-wider text-muted font-bold">
+            <h3 className="text-xs uppercase tracking-wider text-muted font-bold">
               Countertop & Cabinet Run
-            </h4>
+            </h3>
             <div className="space-y-3">
               <div className="flex justify-between items-baseline border-b border-border-subtle pb-2">
                 <span className="text-sm text-muted">Estimated Running Length</span>

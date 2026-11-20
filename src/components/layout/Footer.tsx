@@ -39,10 +39,10 @@ export const Footer: React.FC = () => {
 
           {/* Core Services Links */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xs uppercase tracking-widest text-[#8A8478] font-semibold">
+            <h4 className="text-xs uppercase tracking-widest text-[#C5BFB2] font-semibold">
               Offerings
             </h4>
-            <ul className="space-y-2.5 text-sm text-[#D6D0C4]">
+            <ul className="space-y-2.5 text-sm text-[#EAE6DF]">
               <li>
                 <Link
                   href="/interior-design-prayagraj"
@@ -93,22 +93,22 @@ export const Footer: React.FC = () => {
 
           {/* Showroom Details */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs uppercase tracking-widest text-[#8A8478] font-semibold">
+            <h4 className="text-xs uppercase tracking-widest text-[#C5BFB2] font-semibold">
               Prayagraj Showroom
             </h4>
-            <div className="space-y-3 text-sm text-[#D6D0C4]">
+            <div className="space-y-3 text-sm text-[#EAE6DF]">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#FF7A45] shrink-0 mt-0.5" />
                 <p className="leading-snug">
                   {COMPANY.address}
                 </p>
               </div>
               <div className="flex items-center gap-2.5">
-                <Clock className="w-4 h-4 text-accent shrink-0" />
+                <Clock className="w-4 h-4 text-[#FF7A45] shrink-0" />
                 <p>{COMPANY.hours}</p>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-accent shrink-0" />
+                <Phone className="w-4 h-4 text-[#FF7A45] shrink-0" />
                 <a href={`tel:${COMPANY.phoneRaw}`} className="hover:text-white transition-colors">
                   {COMPANY.phone}
                 </a>
@@ -119,7 +119,7 @@ export const Footer: React.FC = () => {
                 href={COMPANY.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-accent hover:underline inline-flex items-center gap-1 font-medium"
+                className="text-xs text-[#FF7A45] hover:text-[#FFA37A] hover:underline inline-flex items-center gap-1 font-medium"
               >
                 Get Google Maps Directions &rarr;
               </a>
@@ -128,17 +128,17 @@ export const Footer: React.FC = () => {
 
           {/* Neighborhoods Served */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs uppercase tracking-widest text-[#8A8478] font-semibold">
+            <h4 className="text-xs uppercase tracking-widest text-[#C5BFB2] font-semibold">
               Areas Served in Prayagraj
             </h4>
-            <p className="text-xs text-[#8A8478] leading-relaxed">
+            <p className="text-xs text-[#C5BFB2] leading-relaxed">
               We provide free site measurement visits and turnkey execution across:
             </p>
             <div className="flex flex-wrap gap-1.5 pt-1">
               {COMPANY.neighborhoodsServed.map((area) => (
                 <span
                   key={area}
-                  className="text-[11px] px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[#C4BEB2]"
+                  className="text-[11px] px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[#EAE6DF]"
                 >
                   {area}
                 </span>
@@ -148,7 +148,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8A8478]">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#C5BFB2]">
           <p>
             &copy; 2026 WALL & DECO. All rights reserved. Prayagraj, UP.
           </p>

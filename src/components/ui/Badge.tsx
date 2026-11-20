@@ -14,8 +14,8 @@ export const Badge: React.FC<BadgeProps> = ({
 }) => {
   const variantStyles = {
     default: "bg-ink/5 text-ink border border-border-subtle",
-    accent: "bg-accent/10 text-accent border border-accent/20",
-    surface: "bg-surface text-muted border border-border-subtle",
+    accent: "bg-accent/10 text-[#C44512] border border-accent/20 font-semibold",
+    surface: "bg-surface text-[#4A453C] border border-border-subtle font-medium",
     concept: "bg-amber-100/70 text-amber-900 border border-amber-300/60 font-medium",
     completed: "bg-emerald-100/70 text-emerald-900 border border-emerald-300/60 font-medium",
   };

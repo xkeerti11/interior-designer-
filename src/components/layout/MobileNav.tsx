@@ -39,27 +39,25 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, onClose]);
 
+  if (!isOpen) return null;
+
   return (
     <div
-      className={`fixed inset-0 z-50 lg:hidden flex flex-col transition-all duration-300 ${
-        isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-      }`}
-      aria-hidden={!isOpen}
+      className="fixed inset-0 z-50 lg:hidden flex flex-col"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation Menu"
     >
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 bg-ink/60 backdrop-blur-xs transition-opacity duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0"
-        }`}
+        className="fixed inset-0 bg-ink/60 backdrop-blur-xs transition-opacity duration-300 animate-in fade-in"
         onClick={onClose}
         aria-hidden="true"
       />
 
       {/* Drawer */}
       <div
-        className={`relative z-10 w-full max-w-[85vw] sm:max-w-sm ml-auto h-full bg-surface shadow-2xl flex flex-col justify-between p-6 overflow-y-auto transform transition-transform duration-300 ease-out ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className="relative z-10 w-full max-w-[85vw] sm:max-w-sm ml-auto h-full bg-surface shadow-2xl flex flex-col justify-between p-6 overflow-y-auto transform transition-transform duration-300 ease-out translate-x-0 animate-in slide-in-from-right"
       >
         <div>
           {/* Header */}

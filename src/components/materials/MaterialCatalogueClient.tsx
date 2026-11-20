@@ -72,10 +72,12 @@ export const MaterialCatalogueClient: React.FC<MaterialCatalogueClientProps> = (
         <div className="relative flex-1 max-w-md">
           <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
           <input
+            id="material-search"
             type="text"
             placeholder="Search material textures, thickness, finishes..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            aria-label="Search material textures, thickness, finishes"
             className="w-full pl-10 pr-4 py-2 text-sm rounded-xl bg-canvas border border-border-subtle focus:outline-none focus:ring-2 focus:ring-accent/40 text-ink"
           />
           {searchQuery && (
