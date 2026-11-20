@@ -95,7 +95,6 @@ export default function HomePage() {
                   priority
                   fetchPriority="high"
                   sizes="(max-width: 640px) 92vw, (max-width: 1024px) 85vw, 480px"
-                  quality={80}
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
