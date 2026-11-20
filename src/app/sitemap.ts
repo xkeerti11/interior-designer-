@@ -1,7 +1,13 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://wallanddeco.in";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
+    ? process.env.NEXT_PUBLIC_SITE_URL
+    : process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "https://interior-designer-iota-three.vercel.app";
 
   const routes = [
     "",

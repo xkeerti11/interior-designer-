@@ -2,6 +2,8 @@
 
 > Turnkey interior design, modular kitchens, PVC/WPC fluted panels, and acoustic uPVC windows in Prayagraj, Uttar Pradesh.
 
+For comprehensive documentation, see [Full LLM Context](https://interior-designer-iota-three.vercel.app/llms-full.txt).
+
 ## About
 WALL & DECO is a premier interior architecture studio and material supplier located at Chowk, Garhi Sarai, Prayagraj, Uttar Pradesh 211003. Open daily until 10:00 PM.
 

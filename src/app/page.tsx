@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import {
   ArrowRight,
   ShieldCheck,
@@ -18,20 +17,11 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { HeadingFormula } from "@/components/ui/HeadingFormula";
 import { Badge } from "@/components/ui/Badge";
+import { BeforeAfterSlider } from "@/components/home/BeforeAfterSlider";
+import { QuickEstimator } from "@/components/home/QuickEstimator";
 import { COMPANY } from "@/data/company";
 import { PROJECTS } from "@/data/projects";
 import { formatWhatsAppUrl } from "@/lib/utils";
-
-// Dynamically import below-the-fold interactive components to slash main thread blocking time (TBT)
-const BeforeAfterSlider = dynamic(
-  () => import("@/components/home/BeforeAfterSlider").then((mod) => mod.BeforeAfterSlider),
-  { ssr: true }
-);
-
-const QuickEstimator = dynamic(
-  () => import("@/components/home/QuickEstimator").then((mod) => mod.QuickEstimator),
-  { ssr: true }
-);
 
 export default function HomePage() {
   return (
@@ -214,6 +204,7 @@ export default function HomePage() {
                 </div>
                 <Link
                   href="/interior-design-prayagraj"
+                  aria-label="Explore turnkey interior design process for Prayagraj homes"
                   className="text-xs font-bold text-accent inline-flex items-center gap-1 group-hover:gap-2 transition-all"
                 >
                   <span>Explore Interior Process</span>
@@ -248,6 +239,7 @@ export default function HomePage() {
                 </div>
                 <Link
                   href="/modular-kitchen-prayagraj"
+                  aria-label="Design your modular kitchen with waterproof materials"
                   className="text-xs font-bold text-accent inline-flex items-center gap-1 group-hover:gap-2 transition-all"
                 >
                   <span>Design Your Kitchen</span>
@@ -282,6 +274,7 @@ export default function HomePage() {
                 </div>
                 <Link
                   href="/pvc-wpc-wall-panels-prayagraj"
+                  aria-label="Browse PVC, WPC and Charcoal material catalogue"
                   className="text-xs font-bold text-accent inline-flex items-center gap-1 group-hover:gap-2 transition-all"
                 >
                   <span>Browse Material Catalogue</span>
@@ -316,6 +309,7 @@ export default function HomePage() {
                 </div>
                 <Link
                   href="/upvc-windows-doors"
+                  aria-label="Test acoustic soundproof uPVC demo"
                   className="text-xs font-bold text-accent inline-flex items-center gap-1 group-hover:gap-2 transition-all"
                 >
                   <span>Test Acoustic Demo</span>
@@ -442,6 +436,7 @@ export default function HomePage() {
                   <div className="pt-2 border-t border-border-subtle">
                     <Link
                       href="/portfolio"
+                      aria-label={`View full project details for ${project.title} in ${project.neighborhood}`}
                       className="text-xs font-semibold text-accent hover:underline inline-flex items-center gap-1"
                     >
                       View Project Details &rarr;

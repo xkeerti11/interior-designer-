@@ -9,9 +9,6 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 31536000,
   },
   reactStrictMode: true,
-  experimental: {
-    optimizePackageImports: ["lucide-react"],
-  },
   turbopack: {
     rules: {
       "*.css": {

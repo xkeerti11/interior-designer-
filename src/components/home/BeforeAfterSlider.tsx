@@ -78,6 +78,7 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
       aria-valuenow={Math.round(sliderPosition)}
       aria-valuemin={0}
       aria-valuemax={100}
+      aria-orientation="horizontal"
       tabIndex={0}
       onKeyDown={handleKeyDown}
     >
@@ -87,7 +88,7 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
           src={afterImage}
           alt={afterAlt}
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 650px"
+          sizes="(max-width: 640px) 92vw, (max-width: 1024px) 50vw, 600px"
           quality={75}
           className="object-cover"
         />
@@ -108,7 +109,7 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
             src={beforeImage}
             alt={beforeAlt}
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 650px"
+            sizes="(max-width: 640px) 92vw, (max-width: 1024px) 50vw, 600px"
             quality={75}
             className="object-cover"
           />
