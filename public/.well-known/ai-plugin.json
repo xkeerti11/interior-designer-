@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "wall_and_deco_prayagraj",
+  "name_for_human": "WALL & DECO Interior Studio",
+  "description_for_model": "Official catalogue and consultation scheduling API for WALL & DECO turnkey interior studio in Prayagraj, UP.",
+  "description_for_human": "Turnkey interior execution, modular kitchens, and wall panel material showroom in Prayagraj.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://interior-designer-iota-three.vercel.app/ai-catalog.json"
+  },
+  "logo_url": "https://interior-designer-iota-three.vercel.app/favicon.ico",
+  "contact_email": "contact@wallanddeco.in",
+  "legal_info_url": "https://interior-designer-iota-three.vercel.app/privacy-policy"
+}

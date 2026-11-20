@@ -16,11 +16,6 @@ export const plusJakartaSans = localFont({
 export const instrumentSerif = localFont({
   src: [
     {
-      path: "../../public/fonts/InstrumentSerif_0.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
       path: "../../public/fonts/InstrumentSerif_1.woff2",
       weight: "400",
       style: "italic",

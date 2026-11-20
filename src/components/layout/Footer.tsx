@@ -39,9 +39,9 @@ export const Footer: React.FC = () => {
 
           {/* Core Services Links */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xs uppercase tracking-widest text-[#C5BFB2] font-semibold">
+            <h3 className="text-xs uppercase tracking-widest text-[#C5BFB2] font-semibold">
               Offerings
-            </h4>
+            </h3>
             <ul className="space-y-2.5 text-sm text-[#EAE6DF]">
               <li>
                 <Link
@@ -93,9 +93,9 @@ export const Footer: React.FC = () => {
 
           {/* Showroom Details */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs uppercase tracking-widest text-[#C5BFB2] font-semibold">
+            <h3 className="text-xs uppercase tracking-widest text-[#C5BFB2] font-semibold">
               Prayagraj Showroom
-            </h4>
+            </h3>
             <div className="space-y-3 text-sm text-[#EAE6DF]">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#FF7A45] shrink-0 mt-0.5" />
@@ -128,9 +128,9 @@ export const Footer: React.FC = () => {
 
           {/* Neighborhoods Served */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs uppercase tracking-widest text-[#C5BFB2] font-semibold">
+            <h3 className="text-xs uppercase tracking-widest text-[#C5BFB2] font-semibold">
               Areas Served in Prayagraj
-            </h4>
+            </h3>
             <p className="text-xs text-[#C5BFB2] leading-relaxed">
               We provide free site measurement visits and turnkey execution across:
             </p>
