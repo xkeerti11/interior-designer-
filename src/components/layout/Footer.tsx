@@ -152,7 +152,7 @@ export const Footer: React.FC = () => {
           <p>
             &copy; 2026 WALL & DECO. All rights reserved. Prayagraj, UP.
           </p>
-          <div className="flex items-center space-x-6">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-6 gap-y-2">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
@@ -162,6 +162,18 @@ export const Footer: React.FC = () => {
             <Link href="/contact-showroom" className="hover:text-white transition-colors">
               Showroom Visit
             </Link>
+            <a
+              href="https://www.ktux.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#EAE6DF] hover:text-[#FF7A45] font-medium transition-colors inline-flex items-center gap-1 group"
+              aria-label="Made by ktux (opens in a new tab)"
+            >
+              <span>Made by</span>
+              <span className="font-semibold underline underline-offset-4 decoration-white/30 group-hover:decoration-[#FF7A45]">
+                ktux
+              </span>
+            </a>
           </div>
         </div>
       </Container>
